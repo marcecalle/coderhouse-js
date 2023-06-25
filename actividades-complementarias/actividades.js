@@ -120,18 +120,100 @@
 
 //* Actividad 5 (VACÍO)
 
-let product1 = prompt('Ingrese producto de alamacén 1:')
-let product2 = prompt('Ingrese producto de alamacén 2:')
-let product3 = prompt('Ingrese producto de alamacén 3:')
-let product4 = prompt('Ingrese producto de alamacén 4:')
+// let product1 = prompt('Ingrese producto de alamacén 1:')
+// let product2 = prompt('Ingrese producto de alamacén 2:')
+// let product3 = prompt('Ingrese producto de alamacén 3:')
+// let product4 = prompt('Ingrese producto de alamacén 4:')
 
-if ((product1 !== '') && (product2 !== '') && (product3 !== '') && (product4 !== '')) {
-   alert(
-      'Los productos son: '
-      + product1 + ', '
-      + product2 + ', '
-      + product3 + ', '
-      + product4 + '.')
-} else {
-   alert('Error: Es necesario cargar todos los productos')
-}
+// if ((product1 !== '') && (product2 !== '') && (product3 !== '') && (product4 !== '')) {
+//    alert(
+//       'Los productos son: '
+//       + product1 + ', '
+//       + product2 + ', '
+//       + product3 + ', '
+//       + product4 + '.')
+// } else {
+//    alert('Error: Es necesario cargar todos los productos')
+// }
+
+//! EJERCICIO 3
+
+//* Actividad 1 (EL PIZARRON)
+
+// let counter = Number(prompt('Ingrese la cantidad de repeticiones que desea.'))
+// let text    = prompt('Ingrese el texto que desea repetir.')
+
+// for (let index = 0; index < counter; index++) {
+//    alert(text);
+// }
+
+//* Actividad 2 (EL CUADRADO ORDINARIO)
+
+// let counter = Number(prompt('Ingrese la cantidad de repeticiones que desea.'))
+
+// for (let index = 0; index < counter; index++) {
+//    if (index >= 4) {
+//       break
+//    } else {
+//       alert('lado')
+//    }
+// }
+
+//* Actividad 3 (REGISTRO DE ALUMNOS)
+
+// let counter = 10
+// let alumnos = ''
+
+// for (let index = 0; index < counter; index++) {
+//    alumnos += prompt('Ingrese el nombre del alumno: ') + '\n'
+// }
+// alert(alumnos)
+
+//* Actividad 4 (EL INNOMBRABLE)
+
+// let nameList  = ''
+// let inputName = ''
+
+// while (inputName !== 'Voldemort') {
+//    inputName = prompt('Ingrese un nombre a listar. (para salir mencione al "innombrable")')
+//    if (inputName !== 'Voldemort') {
+//       nameList +=  inputName + '\n'
+//    } else {
+//       alert('Dijiste su nombre!')
+//    }
+// }
+// alert(nameList)
+
+//* Actividad 5 (COMPRANDO PRODUCTOS)
+
+// let product = ''
+// let  inputNumber = ''
+
+// while (inputNumber !== 'ESC') {
+//    inputNumber = prompt('Ingrese un némero entre 1 y 4 para seleccionar un producto. (Ingrese "ESC" para salir)')
+//    switch (inputNumber) {
+//       case '1':
+//          product += 'Tomate' + '\n'
+//          break;
+
+//       case '2':
+//          product += 'Papa' + '\n'
+//          break;
+
+//       case '3':
+//          product += 'Carne' + '\n'
+//          break;
+
+//       case '4':
+//          product += 'Pollo' + '\n'
+//          break;
+         
+//       case 'ESC':
+//          break;
+
+//       default:
+//          alert('Ingrese una opción valida')
+//          break;
+//    }
+// }
+// alert('Los productos ingresados son:\n' + product)
