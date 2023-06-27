@@ -265,13 +265,78 @@
 
 //* Actividad 4 (COTIZACIÓN)
 
-function quoteDollar(pesos) {
-   return pesos / 350
+// const dollarPrice = 350
+
+// function quoteDollar(pesos) {
+//    return pesos / dollarPrice
+// }
+
+// function quotePeso(dollar) {
+//    return dollar * dollarPrice
+// }
+// let input = prompt("Seleccione la opción deseada: \n 1- Dolares a Pesos \n 2- Pesos a Dolares ")
+// let value = prompt('Importe a cambiar:')
+
+// switch (input) {
+//    case '1':
+//       alert(quotePeso(value))
+//       break;
+//    case '2':
+//       alert(quoteDollar(value))
+//       break;
+
+//    default:
+//       break;
+// }
+
+//* Actividad 5 (VALIDACIÓN)
+
+// function validation(string) {
+//    return string !== ""
+// }
+// let input = prompt('Ingresar una cadena de texto. (para salir tipear "ESC".)')
+
+// while (input !== 'ESC') {
+//    alert(validation(input))
+//    input = prompt('Ingresar una cadena de texto. (para salir tipear "ESC".)')
+// }
+
+//! EJERCICIO 5
+
+//* Actividad 1 (LA TIENDA)
+
+// class Shop {
+//    constructor(shopName, address, owner, category) {
+//       this.shopName = shopName
+//       this.address  = address
+//       this.owner    = owner
+//       this.category = category 
+//    }
+// }
+
+// const shop01 = new Shop('Musimundo', 'Rivadavia 18300', 'Sr. Musimundo', 'Electronica')
+// const shop02 = new Shop('Fravega', 'San Martín 7400', 'Sr. Fravega', 'Electronica')
+// const shop03 = new Shop('Burguer', 'Rosas 540', 'Sra. Burguer', 'Alimentos')
+
+// console.log(shop01);
+// console.log(shop02);
+// console.log(shop03);
+
+//* Actividad 2 (REGISTRO DE TIENDAS)
+
+class Shop {
+   constructor(shopName, address, owner, category) {
+      this.shopName = shopName
+      this.address  = address
+      this.owner    = owner
+      this.category = category 
+   }
 }
 
-function quotePeso(dollar) {
-   return dollar * 350
-}
+const shop1 = new Shop(
+      this.shopName = prompt('Ingresar nombre de la tienda: '),
+      this.addres = prompt('Ingresar dirección de la tienda: '),
+      this.owner = prompt('Ingresar nombre del dueño de la tienda: '),
+      this.category = prompt('Ingrese rubro de la tienda: '))
 
-alert(quoteDollar(parseFloat(prompt('Ingrese el monto de pesos que quiere cambiar a dolar:'))))
-alert(quotePeso(parseFloat(prompt('Ingrese el monto de dolares que quiere cambiar a pesos:'))))
+console.log(shop1);
