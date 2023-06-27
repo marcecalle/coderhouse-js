@@ -217,3 +217,61 @@
 //    }
 // }
 // alert('Los productos ingresados son:\n' + product)
+
+//! EJERCICIO 4
+
+//* Actividad 1 (ENTRADAS Y SALIDAS)
+
+// function entry() {
+//    let num = Number(prompt('Ingrese un valor entero.'))
+//    return num
+// }
+
+// function prosecution(value) {
+//    value += value * 2
+//    return value
+// }
+
+// function output(result) {
+//    alert('el resultado es: ' + result)
+// }
+
+// output(prosecution(entry()))
+
+//* Actividad 2 (REDONDEO)
+
+// let input 
+
+// function rounding(number) {
+//    return Math.round(number) 
+// }
+
+// for (let index = 0; index < 5; index++) {
+//    input = parseFloat(prompt('Ingrese un número no entero.'))
+//    alert('El número ingresado se redondeo a: ' + rounding(input));
+// }
+
+//* Actividad 3 (IMPUESTOS)
+
+// function tax(price, percent) {
+//    return price += (percent * price) / 100
+// }
+
+// for (let index = 0; index < 5; index++) {
+//    let price = parseFloat(prompt('Ingrese el precio del producto por favor.'))
+//    let percent = parseFloat(prompt('Ingrese el porcentaje del impuesto por favor.'))
+//    alert('El precio final con impuestos es: ' + tax(price, percent));
+// }
+
+//* Actividad 4 (COTIZACIÓN)
+
+function quoteDollar(pesos) {
+   return pesos / 350
+}
+
+function quotePeso(dollar) {
+   return dollar * 350
+}
+
+alert(quoteDollar(parseFloat(prompt('Ingrese el monto de pesos que quiere cambiar a dolar:'))))
+alert(quotePeso(parseFloat(prompt('Ingrese el monto de dolares que quiere cambiar a pesos:'))))
