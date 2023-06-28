@@ -324,19 +324,56 @@
 
 //* Actividad 2 (REGISTRO DE TIENDAS)
 
-class Shop {
+// class Shops {
+//    constructor(shopName, address, owner, category) {
+//       this.shopName = shopName
+//       this.address  = address
+//       this.owner    = owner
+//       this.category = category 
+//    }
+// }
+
+// let inputShop = ''
+
+// for (let index = 0; index < 2; index++) {
+//    const shop = new Shops(
+//       prompt('Ingresar nombre de la tienda: '),
+//       prompt('Ingresar dirección de la tienda: '),
+//       prompt('Ingresar nombre del dueño de la tienda: '),
+//       prompt('Ingrese rubro de la tienda: '))
+
+//    inputShop +=
+//    `Tienda: ${shop.shopName}
+//    Dirección: ${shop.address}
+//    Propietarios: ${shop.owner}
+//    Rubro: ${shop.category}\n`
+// }
+
+// alert(inputShop)
+
+//* Actividad 3 (ABIERTO Y CERRADO)
+
+class Shops {
    constructor(shopName, address, owner, category) {
       this.shopName = shopName
       this.address  = address
       this.owner    = owner
       this.category = category 
    }
+   open(inputHour) {
+      if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
+         return true
+      } else {
+         return false
+      }
+   }
 }
-
-const shop1 = new Shop(
-      this.shopName = prompt('Ingresar nombre de la tienda: '),
-      this.addres = prompt('Ingresar dirección de la tienda: '),
-      this.owner = prompt('Ingresar nombre del dueño de la tienda: '),
-      this.category = prompt('Ingrese rubro de la tienda: '))
-
-console.log(shop1);
+const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
+for (let index = 0; index < 3; index++) {
+   let hour = Number(prompt('Ingrese un horario: '))
+   if (shop.open(hour)) {
+      alert(shop.open(hour))
+   } else {
+      alert(shop.open(hour))
+   }
+}
