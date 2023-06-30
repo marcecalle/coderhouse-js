@@ -353,6 +353,33 @@
 
 //* Actividad 3 (ABIERTO Y CERRADO)
 
+// class Shops {
+//    constructor(shopName, address, owner, category) {
+//       this.shopName = shopName
+//       this.address  = address
+//       this.owner    = owner
+//       this.category = category 
+//    }
+//    open(inputHour) {
+//       if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
+//          return true
+//       } else {
+//          return false
+//       }
+//    }
+// }
+// const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
+// for (let index = 0; index < 3; index++) {
+//    let hour = Number(prompt('Ingrese un horario: '))
+//    if (shop.open(hour)) {
+//       alert(shop.open(hour))
+//    } else {
+//       alert(shop.open(hour))
+//    }
+// }
+
+//* Actividad 4 (VALIDAR PROPIETARIO)
+
 class Shops {
    constructor(shopName, address, owner, category) {
       this.shopName = shopName
@@ -367,13 +394,15 @@ class Shops {
          return false
       }
    }
-}
-const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
-for (let index = 0; index < 3; index++) {
-   let hour = Number(prompt('Ingrese un horario: '))
-   if (shop.open(hour)) {
-      alert(shop.open(hour))
-   } else {
-      alert(shop.open(hour))
+   isOwner(name) {
+      return this.owner === name
    }
 }
+
+const shop = new Shops(
+   'KFC',
+   'Rosas 450',
+   'Sr. KFC',
+   'Restaurante'
+)
+console.log(shop.isOwner('KFC'))
