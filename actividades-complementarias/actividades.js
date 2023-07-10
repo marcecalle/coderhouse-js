@@ -353,27 +353,207 @@
 
 //* Actividad 3 (ABIERTO Y CERRADO)
 
-class Shops {
-   constructor(shopName, address, owner, category) {
-      this.shopName = shopName
-      this.address  = address
-      this.owner    = owner
-      this.category = category 
-   }
-   open(inputHour) {
-      if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
-         return true
-      } else {
-         return false
-      }
+// class Shop {
+//    constructor(shopName, address, owner, category) {
+//       this.shopName = shopName
+//       this.address  = address
+//       this.owner    = owner
+//       this.category = category 
+//    }
+//    open(inputHour) {
+//       if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
+//          alert('Abierto')
+//       } else {
+//          alert('Cerrado')
+//       }
+//    }
+// }
+// const shop = new Shop('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
+
+// for (let index = 0; index < 3; index++) {
+//    let hour = Number(prompt('Ingrese un horario: '))
+//    if (shop.open(hour)) {
+//       alert(shop.open(hour))
+//    } else {
+//       alert(shop.open(hour))
+//    }
+// }
+
+//* Actividad 4 (VALIDAR PROPIETARIO)
+
+// class Shop {
+//       constructor(shopName, address, owner, category) {
+//          this.shopName = shopName
+//          this.address  = address
+//          this.owner    = owner
+//          this.category = category 
+//       }
+//       open(inputHour) {
+//          if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
+//             alert('Abierto')
+//          } else {
+//             alert('Cerrado')
+//          }
+//       }
+//       isOwner(name) {
+//          if (name === this.owner) {
+//             return true
+//          } else {
+//             return false
+//          }
+//       }
+//    }
+
+// const shop01 = new Shop('Musimundo', 'Rivadavia 18300', 'Sr. Musimundo', 'Electronica')
+// const shop02 = new Shop('Fravega', 'San Martín 7400', 'Sr. Fravega', 'Electronica')
+// const shop03 = new Shop('Burguer', 'Rosas 540', 'Sra. Burguer', 'Alimentos')
+
+// for(let i = 0; i < 5; i++) {
+//    let inputName = prompt('Ingrese el nombre del dueño de la tienda:')
+//    if (shop01.isOwner(inputName)) {
+//       alert(`${inputName} es el/la dueño/a de la tienda ${shop01.shopName}.`)
+//    }
+//    if (shop02.isOwner(inputName)) {
+//       alert(`${inputName} es el/la dueño/a de la tienda ${shop02.shopName}.`)
+//    }
+//    if (shop03.isOwner(inputName)) {
+//       alert(`${inputName} es el7la dueño/a de la tienda ${shop03.shopName}.`)
+//    }
+// }
+
+//* Actividad 5 (EL CLIENTE)
+
+// class Client {
+//    constructor(name, budget, giftCard, phoneNumber) {
+//       this.name = name
+//       this.budget = budget
+//       this.giftCard = giftCard
+//       this.phoneNumber = phoneNumber
+//    }
+//    moneyTransfer(value) {
+//       if ((value < this.budget) && (value > 0)) {
+//          this.budget = this.budget - value
+//          alert('El total fue debitado satisfactoriamente de su presupuesto')
+//       } else {
+//          alert('No se puede hacer la transferencia.')
+//       }
+//    }
+// }
+
+// const client1 = new Client('Marcelo', 10000, false, '1123334444')
+// const client2 = new Client('Paula', 15000, false, '1123335555')
+// const client3 = new Client('Jazmin', 40000, true, '1123336666')
+
+// for(let i = 0; i < 5; i++) {
+//    let total = parseFloat(prompt('Ingrese el total a debitar de su presupuesto.'))
+//    client1.moneyTransfer(total)
+//    client2.moneyTransfer(total)
+//    client3.moneyTransfer(total)
+// }
+
+//! EJERCICIO 6
+
+//* Actividad 1 (EL EQUIPO)
+
+// const playersNames = ['Apu', 'Homer', 'Moe', 'Burns']
+
+// for(let i = 0;i < 4; i++) {
+//    alert(`El nombre del jugador es: ${playersNames[i]} y la posición es: ${[i]}`)
+// }
+
+// for(let playerName of playersNames) {
+//    alert(playerName)
+// }
+
+//* Actividad 2 (CARGA EL EQUIPO)
+
+// const playersNames = []
+
+// let inputName = prompt('Ingrese el nombre del jugador.\n(Para salir ingrese "ESC")')
+
+// while(inputName !== "ESC") {
+//    playersNames.push(inputName)
+//    inputName = prompt('Ingrese el nombre del jugador.\n(Para salir ingrese "ESC")')
+// }
+
+// for(let i = 0; i < playersNames.length; i++) {
+//    alert(`El nombre del jugador es: ${playersNames[i]} y la posición es: ${[i]}`)
+// }
+
+//* Actividad 3 (JUGADORES)
+
+// class Player {
+//    constructor(playerName, number, age, injury) {
+//       this.playerName = playerName
+//       this.number     = number
+//       this.age        = age
+//       this.injury     = injury
+//    }
+// }
+
+// const players = []
+
+// players.push(new Player('Bart', 15, 10, true))
+// players.push(new Player('Nelson', 2, 11, false))
+// players.push(new Player('Ralph', 8, 8, false))
+// players.push(new Player('Lisa', 10, 8, true))
+// players.push(new Player('Milhouse', 7, 11, false))
+
+//* Actividad 4 (BUSCAR JUGADOR)
+
+// class Player {
+//    constructor(playerName, number, age, injury) {
+//       this.playerName = playerName
+//       this.number     = number
+//       this.age        = age
+//       this.injury     = injury
+//    }
+// }
+
+// const players = []
+
+// players.push(new Player('Bart', 15, 10, true))
+// players.push(new Player('Nelson', 2, 11, false))
+// players.push(new Player('Ralph', 8, 8, false))
+// players.push(new Player('Lisa', 10, 8, true))
+// players.push(new Player('Milhouse', 7, 11, false))
+
+// function playerFinder(team, player) {
+//    return team.find(elemento => elemento.playerName === player)
+// }
+
+// for(let i = 0; i < 3; i++) {
+//    let input = playerFinder(players, prompt('Ingrese nombre del jugador que seda buscar.'))
+//    if(input !== undefined) {
+//       alert(`Jugador: ${input.playerName} Camiseta: ${input.number} Edad: ${input.age}`)
+//    } else {
+//       alert('No existe jugador con ese nombre.')
+//    }
+// }
+
+//* Actividad 5 (FILTRAR JUGADORES)
+
+class Player {
+   constructor(playerName, number, age, injury) {
+      this.playerName = playerName
+      this.number     = number
+      this.age        = age
+      this.injury     = injury
    }
 }
-const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
-for (let index = 0; index < 3; index++) {
-   let hour = Number(prompt('Ingrese un horario: '))
-   if (shop.open(hour)) {
-      alert(shop.open(hour))
-   } else {
-      alert(shop.open(hour))
-   }
+
+const players = []
+
+players.push(new Player('Bart', 15, 10, true))
+players.push(new Player('Nelson', 2, 11, false))
+players.push(new Player('Ralph', 8, 8, false))
+players.push(new Player('Lisa', 10, 8, true))
+players.push(new Player('Milhouse', 7, 11, false))
+players.push(new Player('Rod', 66, 10, false))
+players.push(new Player('Todd', 6, 8, true))
+
+function playerFilter(team, age) {
+   team.filter(elemento => elemento.age === parseInt(age))
 }
+
+console.log(playerFilter(players, Number(prompt('Ingerse la edad que desea filtrar'))))
