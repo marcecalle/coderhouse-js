@@ -533,27 +533,86 @@
 
 //* Actividad 5 (FILTRAR JUGADORES)
 
-class Player {
-   constructor(playerName, number, age, injury) {
-      this.playerName = playerName
-      this.number     = number
-      this.age        = age
-      this.injury     = injury
-   }
-}
+// class Player {
+//    constructor(playerName, number, age, injury) {
+//       this.playerName = playerName
+//       this.number     = number
+//       this.age        = age
+//       this.injury     = injury
+//    }
+// }
 
-const players = []
+// const players = []
 
-players.push(new Player('Bart', 15, 10, true))
-players.push(new Player('Nelson', 2, 11, false))
-players.push(new Player('Ralph', 8, 8, false))
-players.push(new Player('Lisa', 10, 8, true))
-players.push(new Player('Milhouse', 7, 11, false))
-players.push(new Player('Rod', 66, 10, false))
-players.push(new Player('Todd', 6, 8, true))
+// players.push(new Player('Bart', 15, 10, true))
+// players.push(new Player('Nelson', 2, 11, false))
+// players.push(new Player('Ralph', 8, 8, false))
+// players.push(new Player('Lisa', 10, 8, true))
+// players.push(new Player('Milhouse', 7, 11, false))
+// players.push(new Player('Rod', 66, 10, false))
+// players.push(new Player('Todd', 6, 8, true))
 
-function playerFilter(team, age) {
-   team.filter(elemento => elemento.age === parseInt(age))
-}
+// function playerFilter(team, age) {
+//    return team.filter(elemento => elemento.age === age)
+// }
 
-console.log(playerFilter(players, Number(prompt('Ingerse la edad que desea filtrar'))))
+// console.log(playerFilter(players, Number(prompt('Ingerse la edad que desea filtrar'))))
+
+//! EJERCICIO 7
+
+//* Actividad 1 (EL VISITANTE)
+
+// let key = localStorage.getItem('nombre')
+// if (key === null) {
+//    localStorage.setItem('nombre', prompt('Ingresar nombre de usuario.'))
+// } else {
+//    alert('El nombre es: ' + key)
+// }
+
+//* Actividad 2 (ALMACENAR EN EL MENU)
+
+// let comidas = localStorage.getItem('comidas')
+
+// if(comidas === null) {
+//    const menu = []
+//    for(let i = 0; i < 5; i++) {
+//       menu.push(prompt('Ingrese una comida:'))
+//    }
+//    localStorage.setItem('comidas', menu)
+// } else {
+//    let menu = ''
+//    const arrayComidas = comidas.split(',')
+//    for(const nombreComida of arrayComidas) {
+//       menu += nombreComida + '\n'
+//    }
+//    alert(menu)
+// }
+
+//* Actividad 3 (ALMACENAR HAMBURGUESA)
+
+// class Hamburguesa {
+//    constructor(nombre, precio, ingredientes, numeroCombo) {
+//       this.nombre       = nombre
+//       this.precio       = precio
+//       this.ingredientes = ingredientes
+//       this.numeroCombo  = numeroCombo
+//    }
+// }
+
+// const hamburguesas = []
+
+// hamburguesas.push(new Hamburguesa('Krusty Burguer', 2600, 'Pepino y cebolla', 1))
+// hamburguesas.push(new Hamburguesa('Cuarto de libra', 3500, 'Chedar y salsa', 2))
+// hamburguesas.push(new Hamburguesa('Big Mac', 3000, 'Pepino, tomate y cebolla', 3))
+// hamburguesas.push(new Hamburguesa('Whopper', 3200, 'Pepino', 4))
+// hamburguesas.push(new Hamburguesa('Provoking', 2500, 'Lechuga y tomate', 5))
+
+// const hamburguesasJSON = JSON.stringify(hamburguesas)
+
+// localStorage.setItem('hamburguesas', JSON.stringify(hamburguesas))
+
+//* Actividad 4 (COMPRAR HAMBURGUESA)
+
+const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
+
+console.log(hamburguesasJSON)
