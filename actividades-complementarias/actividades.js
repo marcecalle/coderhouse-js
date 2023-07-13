@@ -613,6 +613,33 @@
 
 //* Actividad 4 (COMPRAR HAMBURGUESA)
 
-const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
+// const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
 
-console.log(hamburguesasJSON)
+// let listadoHamburguesa = 'Elegir HAMBURGUESA\n'
+// for (let i = 0; i < hamburguesasJSON.length; i++) {
+//    listadoHamburguesa += `${i} -> ${hamburguesasJSON[i].nombre} (${hamburguesasJSON[i].ingredientes}) $ ${hamburguesasJSON[i].precio}\n`
+// }
+// alert(listadoHamburguesa)
+// let entradaCliente = parseInt(prompt('Ingrese el numero de Hamburguesa que desea comprar:'))
+// if((entradaCliente >= 0) && (entradaCliente < hamburguesasJSON.length)) {
+//    alert(`La opción elegida es: ${hamburguesasJSON[entradaCliente].nombre}`)
+// } else {
+//    alert(`Error de selección`)
+// }
+
+//* Actividad 5 (AUMENTAR PRECIOS)
+
+// const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
+
+// let sumarIva = (precio) => precio * 1.30
+
+// for(let i = 0; i < hamburguesasJSON.length; i++) {
+//    hamburguesasJSON[i].precio = sumarIva(hamburguesasJSON[i].precio) 
+// }
+// console.log(hamburguesasJSON)
+// localStorage.setItem('hamburguesas', JSON.stringify(hamburguesasJSON))
+
+//! EJERCICIO 8
+
+//* Actividad 1 (BIENVENIDO A...)
+
