@@ -643,3 +643,17 @@
 
 //* Actividad 1 (BIENVENIDO A...)
 
+const ciudades = [
+   'Springfield',
+   'Shelbyville',
+   'Cypress Creek',
+   'Bronson',
+   'Brockway',
+   'Ogdenville'
+]
+
+for (const ciudad of ciudades) {
+   let h2 = document.createElement('h2')
+   h2.innerHTML = ciudad
+   document.body.appendChild(h2)
+}
