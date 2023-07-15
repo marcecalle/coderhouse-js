@@ -380,7 +380,7 @@
 
 //* Actividad 4 (VALIDAR PROPIETARIO)
 
-class Shops {
+class Shop {
    constructor(shopName, address, owner, category) {
       this.shopName = shopName
       this.address  = address
@@ -394,8 +394,14 @@ class Shops {
          return false
       }
    }
-   isOwner(name) {
-      return this.owner === name
+}
+const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
+for (let index = 0; index < 3; index++) {
+   let hour = Number(prompt('Ingrese un horario: '))
+   if (shop.open(hour)) {
+      alert(shop.open(hour))
+   } else {
+      alert(shop.open(hour))
    }
 }
 
