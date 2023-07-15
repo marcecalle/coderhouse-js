@@ -353,7 +353,7 @@
 
 //* Actividad 3 (ABIERTO Y CERRADO)
 
-// class Shop {
+// class Shops {
 //    constructor(shopName, address, owner, category) {
 //       this.shopName = shopName
 //       this.address  = address
@@ -362,14 +362,13 @@
 //    }
 //    open(inputHour) {
 //       if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
-//          alert('Abierto')
+//          return true
 //       } else {
-//          alert('Cerrado')
+//          return false
 //       }
 //    }
 // }
-// const shop = new Shop('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
-
+// const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
 // for (let index = 0; index < 3; index++) {
 //    let hour = Number(prompt('Ingrese un horario: '))
 //    if (shop.open(hour)) {
@@ -381,28 +380,30 @@
 
 //* Actividad 4 (VALIDAR PROPIETARIO)
 
-// class Shop {
-//       constructor(shopName, address, owner, category) {
-//          this.shopName = shopName
-//          this.address  = address
-//          this.owner    = owner
-//          this.category = category 
-//       }
-//       open(inputHour) {
-//          if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
-//             alert('Abierto')
-//          } else {
-//             alert('Cerrado')
-//          }
-//       }
-//       isOwner(name) {
-//          if (name === this.owner) {
-//             return true
-//          } else {
-//             return false
-//          }
-//       }
-//    }
+class Shop {
+   constructor(shopName, address, owner, category) {
+      this.shopName = shopName
+      this.address  = address
+      this.owner    = owner
+      this.category = category 
+   }
+   open(inputHour) {
+      if ( ((inputHour >= 8) && (inputHour <= 12)) || ((inputHour >= 15) && (inputHour <= 19)) ){
+         return true
+      } else {
+         return false
+      }
+   }
+}
+const shop = new Shops('KFC', 'Rosas 690', 'Sr. KFC', 'Comida rapida')
+for (let index = 0; index < 3; index++) {
+   let hour = Number(prompt('Ingrese un horario: '))
+   if (shop.open(hour)) {
+      alert(shop.open(hour))
+   } else {
+      alert(shop.open(hour))
+   }
+}
 
 // const shop01 = new Shop('Musimundo', 'Rivadavia 18300', 'Sr. Musimundo', 'Electronica')
 // const shop02 = new Shop('Fravega', 'San Martín 7400', 'Sr. Fravega', 'Electronica')
@@ -612,8 +613,29 @@
 // localStorage.setItem('hamburguesas', JSON.stringify(hamburguesas))
 
 //* Actividad 4 (COMPRAR HAMBURGUESA)
+// const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
+// let listadoHamburguesa = 'Elegir HAMBURGUESA\n'
+// for (let i = 0; i < hamburguesasJSON.length; i++) {
+//    listadoHamburguesa += `${i} -> ${hamburguesasJSON[i].nombre} (${hamburguesasJSON[i].ingredientes}) $ ${hamburguesasJSON[i].precio}\n`
+// }
+// alert(listadoHamburguesa)
+// let entradaCliente = parseInt(prompt('Ingrese el numero de Hamburguesa que desea comprar:'))
+// if((entradaCliente >= 0) && (entradaCliente < hamburguesasJSON.length)) {
+//    alert(`La opción elegida es: ${hamburguesasJSON[entradaCliente].nombre}`)
+// } else {
+//    alert(`Error de selección`)
+// }
+//* Actividad 5 (AUMENTAR PRECIOS)
+// const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
+// let sumarIva = (precio) => precio * 1.30
+// for(let i = 0; i < hamburguesasJSON.length; i++) {
+//    hamburguesasJSON[i].precio = sumarIva(hamburguesasJSON[i].precio) 
+// }
+// console.log(hamburguesasJSON)
+// localStorage.setItem('hamburguesas', JSON.stringify(hamburguesasJSON))
+//! EJERCICIO 8
 
-const hamburguesasJSON = JSON.parse(localStorage.getItem('hamburguesas'))
+//* Actividad 1 (BIENVENIDO A...)
 
 const ciudades = [
    'Springfield',
