@@ -719,3 +719,82 @@
 //       <hr>`
 //    document.body.appendChild(div)
 // }
+
+//* Actividad 5 (BOTÓN CONTRATAR)
+
+// class Cantante {
+//    constructor(nombre, edad, pais, id) {
+//       this.nombre = nombre
+//       this.edad   = edad
+//       this.pais   = pais
+//       this.id     = id
+//    }
+// }
+
+// const cantantes = []
+
+// cantantes.push(new Cantante('Homer', 40, 'USA', 1))
+// cantantes.push(new Cantante('Apu', 38, 'India', 2))
+// cantantes.push(new Cantante('Barney', 41, 'USA', 3))
+// cantantes.push(new Cantante('Gorgory', 39, 'Irlanda', 4))
+// cantantes.push(new Cantante('Skinner', 37, 'USA', 5))
+
+// for (const cantante of cantantes) {
+//    let div = document.createElement('div')
+//    div.innerHTML =
+//       `<h2>${cantante.nombre}</h2>
+//       <p>${cantante.edad} - (${cantante.pais})</p>
+//       <button id="${cantante.id}">Contratar</button>
+//       <hr>`
+//    document.body.appendChild(div)
+// }
+
+//! EJERCICIO 9
+
+//* Actividad 1 (BOTÓN DEL NÚCLEO)
+
+// let div = document.createElement('div')
+// div.innerHTML = 
+//       `
+//       <span>
+//          <button id="btnNucleo">CORE DESTRUCT</button>
+//       </span>
+//       `
+// document.body.appendChild(div)
+// let boton = document.getElementById('btnNucleo')
+
+// // Opción 1
+// // boton.addEventListener('click', accionClick => {alert('Para liberar presión del NÚCLEO ingrese "YES"')})
+
+// // Opción 2
+// boton.onclick = accionClick => {alert('Libere la presión del NÚCLEO')}
+
+//* Actividad 2 (ELEGIR ASIGNATURA)
+
+// const asignaturas = ['Lengua', 'Naturales', 'Sociales', 'Matemáticas']
+
+// let select = document.createElement('select')
+// let asignatura = ''
+
+// for (let i = 0; i < asignaturas.length; i++) {
+//    asignatura += `<option value="${i}">${asignaturas[i]}</option>`
+// }
+
+// select.innerHTML = asignatura
+// document.body.appendChild(select)
+
+// let h4 = document.createElement('h4')
+// select.addEventListener('change', function (e) {
+//    h4.innerHTML = asignaturas[e.target.value]
+//    console.log(e.target);
+//    document.body.appendChild(h4)
+// })
+
+//* Actividad 3 (ALTA DE ESTUDIANTE)
+
+let formularioAlta = document.getElementById('formulario')
+formularioAlta.addEventListener('submit', validarFormulario)
+function validarFormulario(evt) {
+   evt.preventDefault()
+   console.log('Formulario enviado');
+}
