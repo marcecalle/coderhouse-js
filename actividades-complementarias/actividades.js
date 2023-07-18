@@ -792,9 +792,22 @@
 
 //* Actividad 3 (ALTA DE ESTUDIANTE)
 
+const estudiantes = []
+class Estudiante {
+   constructor(nombre, apellido, dniNumero) {
+      this.nombre    = nombre
+      this.apellido  = apellido
+      this.dniNumero = dniNumero
+   }
+}
+
 let formularioAlta = document.getElementById('formulario')
 formularioAlta.addEventListener('submit', validarFormulario)
 function validarFormulario(evt) {
    evt.preventDefault()
-   console.log('Formulario enviado');
+   let form = evt.target
+
+   console.log(form.children[0].value)
+   console.log(form.children[1].value)
+   console.log(form.children[2].value)
 }
