@@ -792,22 +792,47 @@
 
 //* Actividad 3 (ALTA DE ESTUDIANTE)
 
-const estudiantes = []
-class Estudiante {
-   constructor(nombre, apellido, dniNumero) {
-      this.nombre    = nombre
-      this.apellido  = apellido
-      this.dniNumero = dniNumero
-   }
-}
+// const estudiantes = []
+// class Estudiante {
+//    constructor(nombre, apellido, dniNumero) {
+//       this.nombre    = nombre
+//       this.apellido  = apellido
+//       this.dniNumero = dniNumero
+//    }
+// }
 
-let formularioAlta = document.getElementById('formulario')
-formularioAlta.addEventListener('submit', validarFormulario)
-function validarFormulario(evt) {
-   evt.preventDefault()
-   let form = evt.target
+// let formularioAlta = document.getElementById('formulario')
+// formularioAlta.addEventListener('submit', validarFormulario)
+// function validarFormulario(evt) {
+//    evt.preventDefault()
+//    let inputs = evt.target.children
 
-   console.log(form.children[0].value)
-   console.log(form.children[1].value)
-   console.log(form.children[2].value)
-}
+// estudiantes.push(new Estudiante(inputs[0].value, inputs[1].value, inputs[2].value))
+// let h3 = document.createElement('h3')
+// h3.innerHTML  = 
+//    `
+//    USUARIO REGISTRADO
+//    `
+// document.body.appendChild(h3)
+// console.log(estudiantes);
+// }
+
+//* Actividad 4 (LISTAR ESTUDIANTES)
+
+// const estudiantes = []
+// class Estudiante {
+//    constructor(nombre, apellido, dniNumero) {
+//       this.nombre    = nombre
+//       this.apellido  = apellido
+//       this.dniNumero = dniNumero
+//    }
+// }
+
+// let formularioAlta = document.getElementById('formulario')
+// formularioAlta.addEventListener('submit', validarFormulario)
+
+// function validarFormulario(evt) {
+//    evt.preventDefault()
+//    let inputs = evt.target.children
+//    estudiantes.push(new Estudiante(inputs[0].value, inputs[1].value, inputs[2].value))
+// }
