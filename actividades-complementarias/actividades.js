@@ -821,18 +821,105 @@
 
 // const estudiantes = []
 // class Estudiante {
-//    constructor(nombre, apellido, dniNumero) {
-//       this.nombre    = nombre
-//       this.apellido  = apellido
+//    constructor(nombre, apellido, dniNumero, id) {
+//       this.nombre = nombre
+//       this.apellido = apellido
 //       this.dniNumero = dniNumero
+//       this.id = estudiantes.length
 //    }
 // }
+// const formulario = document.getElementById("formulario")
 
-// let formularioAlta = document.getElementById('formulario')
-// formularioAlta.addEventListener('submit', validarFormulario)
-
-// function validarFormulario(evt) {
-//    evt.preventDefault()
-//    let inputs = evt.target.children
-//    estudiantes.push(new Estudiante(inputs[0].value, inputs[1].value, inputs[2].value))
+// formulario.addEventListener('submit',(e) => {
+//    e.preventDefault()
+//    const inputs = e.target.children
+//    estudiantes.push(new Estudiante(inputs[0].value, inputs[1].value, inputs[2].value));
+//    mostrarEstudiantes(estudiantes)
+//    const btnEstudiantes = document.getElementsByClassName('btnEstudiante')
+//    for (const boton of btnEstudiantes) {
+//       boton.addEventListener ('click',(e) => {
+//          const seleccionado = estudiantes.find(obj => obj.id == e.target.id)
+//          let notificacion = document.createElement("h5")
+//          notificacion.innerHTML = `Nombre ${seleccionado.nombre}, ${seleccionado.apellido} - DNI:${seleccionado.dniNumero}`
+//          salida.prepend(notificacion)
+//       })
+//    }
+// })
+// function mostrarEstudiantes(estudiantes) {
+//    salida.innerHTML = ''
+//    for (const estudiante of estudiantes) {
+//       let divEstudiante = document.createElement("div")
+//       divEstudiante.innerHTML = `<h2>${estudiante.nombre}</h2>
+//                                  <p>${estudiante.apellido} / ${estudiante.dniNumero} </p>
+//                                  <button id='${estudiante.id}' class='btnEstudiante'>Seleccionar</button>`
+//       salida.appendChild(divEstudiante)
+//    }
 // }
+// const salida = document.createElement("div")
+// document.body.appendChild(formulario)
+// document.body.appendChild(salida)
+
+//* Actividad 5 (SUSPENDER ESTUDIANTE)
+
+const estudiantes = []
+class Estudiante {
+   constructor(nombre, apellido, dniNumero, id, estado) {
+      this.nombre    = nombre
+      this.apellido  = apellido
+      this.dniNumero = dniNumero
+      this.id        = estudiantes.length
+      this.suspendido    = false
+   }
+   suspender() {
+      this.suspendido = true
+   }
+   reincorporar() {
+      this.suspendido = false
+   }
+}
+const formulario = document.getElementById("formulario")
+
+formulario.addEventListener('submit',(e) => {
+   e.preventDefault()
+   const inputs = e.target.children
+   estudiantes.push(new Estudiante(inputs[0].value, inputs[1].value, inputs[2].value));
+   mostrarEstudiantes(estudiantes)
+   const btnEstudiantes = document.getElementsByClassName('btnEstudiante')
+   for (const boton of btnEstudiantes) {
+      boton.addEventListener ('click',(e) => {
+         const seleccionado = estudiantes.find(obj => obj.id == e.target.id)
+         seleccionado.reincorporar()
+         let notificacion = document.createElement("h5")
+         notificacion.innerHTML = `Nombre ${seleccionado.nombre}, ${seleccionado.apellido} - DNI:${seleccionado.dniNumero}`
+         salida.prepend(notificacion)
+         console.log(estudiantes)
+      })
+   }
+   const btnSuspender = document.getElementsByClassName('btnSuspender')
+   for (const boton of btnSuspender) {
+      boton.addEventListener ('click',(e) => {
+         const seleccionado = estudiantes.find(obj => obj.id == e.target.id)
+         seleccionado.suspender()
+         let notificacion = document.createElement("h5")
+         notificacion.innerHTML = `Nombre ${seleccionado.nombre}, ${seleccionado.apellido} - DNI:${seleccionado.dniNumero} "SUSPENDIDO"`
+         salida.prepend(notificacion)
+         console.log(estudiantes)
+      })
+   }
+   console.log(estudiantes)
+})
+
+function mostrarEstudiantes(estudiantes) {
+   salida.innerHTML = ''
+   for (const estudiante of estudiantes) {
+      let divEstudiante = document.createElement("div")
+      divEstudiante.innerHTML = `<h2>${estudiante.nombre}</h2>
+                                 <p>${estudiante.apellido} / ${estudiante.dniNumero}</p>
+                                 <button id='${estudiante.id}' class='btnEstudiante'>Seleccionar</button>
+                                 <button id="${estudiante.id}" class="btnSuspender">Suspender</button>`
+      salida.appendChild(divEstudiante)
+   }
+}
+const salida = document.createElement("div")
+document.body.appendChild(formulario)
+document.body.appendChild(salida)
